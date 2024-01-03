@@ -1,0 +1,30 @@
+<html>
+    {% extends "base.html" %}
+    {% block home %}
+    <center>
+        <h1>
+            {{t}}
+        </h1>
+        <table>
+            <thead>
+                <tr>
+                    <td>name</td>
+                    <td>regno</td>
+                    <td>m1</td>
+                    <td>m2</td>
+                </tr>
+            </thead>
+            {% for k in query %}
+            <tbody>
+                <tr>
+                    <td>{{k.s_name}}</td>
+                    <td>{{k.s_regno}}</td>
+                    <td>{{k.s_m1}}</td>
+                    <td>{{k.s_m2}}</td>
+                </tr>
+            </tbody>
+            {% endfor %}
+        </table>
+    </center>
+    {% endblock %}
+</html>
